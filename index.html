@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+        <a  class="active" href="index.html">home</a>
+        <a href="about us .html">about_us</a>
+        <a href="&">gallery</a>
+        <a href="$">contact_us</a>
+    </div>
+</body>
+<h1>Whitchurch primary school and nursery and  .</h1>
+<p>Located in lodon.</p>
+<p> My school is located close to howbarry lane. </p>
+<p>I our school we have different clubs.</p>
+<p>mrs ines is the headteacher she is kind. </p>
+
+<section>
+    <img class ="mySlides" src="download (1).webp" alt="slide 1">
+    <img class ="mySlides" src="download.jfif" alt="slide 2">
+    <img class ="mySlides" src="download.webp" alt="slide 3"> 
+</section>
+
+<script>
+
+let myIndex = 0;
+
+window.onload = function () {
+
+carousel();
+
+};
+
+function carousel() {
+
+let slides = document.getElementsByClassName("mySlides");
+
+// hide all slides
+
+for (let i = 0; i < slides.length; i++) {
+
+slides[i].style.display = "none";
+
+}
+
+myIndex++;
+
+if (myIndex > slides.length) {
+
+myIndex = 1;
+
+}
+
+slides[myIndex - 1].style.display = "block";
+
+setTimeout(carousel, 3000); // change every 3 seconds
+
+}
+
+</script>
+</html>
